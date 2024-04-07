@@ -233,10 +233,14 @@ async function autoSubmit(appId, token) {
         let message = '用户已经预约成功';
         if (data == false) {
             const res4 = await appoint(activityId, channelId, token);
-            this.sendMessage = res4.message;
+            message = res4.message;
+            console.log(`预约结果[${message}]`);
+            sendMessage.push(`预约结果[${message}]`);
+        }else{
+            console.log(`预约结果[${message}]`);
+            sendMessage.push(`预约结果[${message}]`);
         }
-        console.log(`预约结果[${message}]`);
-        sendMessage.push(`预约结果[${message}]`);
+        
     } catch (err) {
         console.log(`运行异常[${err.message}]`);
         sendMessage.push(`运行异常[${err.message}]`);

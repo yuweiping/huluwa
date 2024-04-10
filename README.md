@@ -6,16 +6,16 @@
 
 ## 环境变量
 
-| 平台名称 | 环境变量 | Token |
-|--------|-------------|-------------|
-| 偲源惠购 | XLTH_COOKIE | 这里填写Token |
-| 贵旅优品 | GLYP_COOKIE | 这里填写Token |
-| 空港乐购 | KGLG_COOKIE | 这里填写Token |
-| 航旅黔购 | HLQG_COOKIE | 这里填写Token |
-| 遵航出山 | ZHCS_COOKIE | 这里填写Token |
-| 贵盐黔品 | GYQP_COOKIE | 这里填写Token |
-| 乐旅商城 | LLSC_COOKIE | 这里填写Token |
-| 黔寻积分 | YLQX_COOKIE | 这里填写Token |
+| 平台名称 | 环境变量 | 小程序 |
+|--------|-------------|
+| 偲源惠购 | XLTH_COOKIE | #小程序://偲源惠购/XbD6tj8rCoEnrib |
+| 贵旅优品 | GLYP_COOKIE | #小程序://贵旅优品/7zz6mtnSVgDfyqa |
+| 空港乐购 | KGLG_COOKIE | #小程序://空港乐购/icspktXhWOjo7hA |
+| 航旅黔购 | HLQG_COOKIE | #小程序://航旅黔购/P20wGHaxdaAhDba |
+| 遵航出山 | ZHCS_COOKIE | #小程序://遵航出山/ZkR7DQy1raoPxKD |
+| 贵盐黔品 | GYQP_COOKIE | #小程序://贵盐黔品/u2TgExCUdkavrFe |
+| 乐旅商城 | LLSC_COOKIE | #小程序://乐旅商城/AyaHIDmVroA2PCE |
+| 黔寻积分 | YLQX_COOKIE | #小程序://黔寻积分/joEamikrJA8k3Oj |
 
 ## 关注&交流
 

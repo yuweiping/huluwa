@@ -8,14 +8,14 @@
 
 | 平台名称 | 环境变量 | Token |
 |--------|-------------|-------------|
-| 新联惠购 | XLTH_COOKIE | 这里填写Token |
+| 偲源惠购 | XLTH_COOKIE | 这里填写Token |
 | 贵旅优品 | GLYP_COOKIE | 这里填写Token |
 | 空港乐购 | KGLG_COOKIE | 这里填写Token |
 | 航旅黔购 | HLQG_COOKIE | 这里填写Token |
 | 遵航出山 | ZHCS_COOKIE | 这里填写Token |
 | 贵盐黔品 | GYQP_COOKIE | 这里填写Token |
 | 乐旅商城 | LLSC_COOKIE | 这里填写Token |
-| 驿路黔寻 | YLQX_COOKIE | 这里填写Token |
+| 黔寻积分 | YLQX_COOKIE | 这里填写Token |
 
 ## 关注&交流
 

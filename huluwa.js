@@ -311,7 +311,7 @@ async function main() {
 
     if (ZHCS_COOKIE_ARR) {
         console.log('遵航出山预约开始');
-        sendMessage.push('航旅黔购预约开始');
+        sendMessage.push('遵航出山预约开始');
         for (let [index, item] of ZHCS_COOKIE_ARR.split(SPLIT).entries()) {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);

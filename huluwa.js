@@ -285,7 +285,7 @@ async function main() {
 
     if (KGLG_COOKIE_ARR) {
         console.log('空港乐购预约开始');
-        sendMessage.push('偲源惠购预约开始');
+        sendMessage.push('空港乐购预约开始');
         for (let [index, item] of KGLG_COOKIE_ARR.split(SPLIT).entries()) {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
@@ -298,7 +298,7 @@ async function main() {
 
     if (HLQG_COOKIE_ARR) {
         console.log('航旅黔购预约开始');
-        sendMessage.push('偲源惠购预约开始');
+        sendMessage.push('航旅黔购预约开始');
         for (let [index, item] of HLQG_COOKIE_ARR.split(SPLIT).entries()) {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
@@ -311,7 +311,7 @@ async function main() {
 
     if (ZHCS_COOKIE_ARR) {
         console.log('遵航出山预约开始');
-        sendMessage.push('偲源惠购预约开始');
+        sendMessage.push('航旅黔购预约开始');
         for (let [index, item] of ZHCS_COOKIE_ARR.split(SPLIT).entries()) {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);

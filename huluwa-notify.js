@@ -243,7 +243,7 @@
  
    if (KGLG_COOKIE_ARR) {
      console.log('空港乐购查询开始');
-     sendMessage.push('偲源惠购查询开始');
+     sendMessage.push('空港乐购查询开始');
      for (let [index, item] of KGLG_COOKIE_ARR.split(SPLIT).entries()) {
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
@@ -256,7 +256,7 @@
  
    if (HLQG_COOKIE_ARR) {
      console.log('航旅黔购查询开始');
-     sendMessage.push('偲源惠购查询开始');
+     sendMessage.push('航旅黔购查询开始');
      for (let [index, item] of HLQG_COOKIE_ARR.split(SPLIT).entries()) {
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
@@ -269,7 +269,7 @@
  
    if (ZHCS_COOKIE_ARR) {
      console.log('遵航出山查询开始');
-     sendMessage.push('偲源惠购查询开始');
+     sendMessage.push('遵航出山查询开始');
      for (let [index, item] of ZHCS_COOKIE_ARR.split(SPLIT).entries()) {
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);

@@ -25,7 +25,7 @@ https://blog.auto100.org/posts/250bb862/
 
 交流群
 
-![](https://cdn.cbd.int/blog-pic@1.2.18/%E8%91%AB%E8%8A%A6%E5%A8%83%E7%BA%A6%E8%8C%85%E5%8F%B0%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/qun.jpg)
+![](https://cdn.cbd.int/blog-pic@1.2.19/%E8%91%AB%E8%8A%A6%E5%A8%83%E7%BA%A6%E8%8C%85%E5%8F%B0%E8%84%9A%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/qun.jpg)
 
 ## 友情链接
 https://github.com/yize8888/maotai  5

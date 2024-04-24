@@ -37,9 +37,19 @@ const AK = '00670fb03584fbf44dd6b136e534f495';
 const SK = '0d65f24dbe2bc1ede3c3ceeb96ef71bb';
 
 let sendMessage = [];
+let result = [];
 
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
+}
+
+function countDuplicates(arr) {
+  const countMap = arr.reduce((countMap, item) => {
+      countMap[item] = (countMap[item] || 0) + 1;
+      return countMap;
+  }, {});
+
+  return Object.entries(countMap).map(([key, value]) => `${key} x${value}`).join('\n')+'\n\n\n';
 }
 
 function calculateDigest(body, sk) {
@@ -236,14 +246,17 @@ async function autoSubmit(appId, token) {
             message = res4.message;
             console.log(`预约结果[${message}]`);
             sendMessage.push(`预约结果[${message}]`);
+            result.push(message);
         }else{
             console.log(`预约结果[${message}]`);
             sendMessage.push(`预约结果[${message}]`);
+            result.push(message);
         }
         
     } catch (err) {
         console.log(`运行异常[${err.message}]`);
         sendMessage.push(`运行异常[${err.message}]`);
+        result.push(err.message);
     }
 }
 
@@ -264,7 +277,7 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(XLTH_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('偲源惠购预约结束\n');
         sendMessage.push('偲源惠购预约结束\n');
@@ -277,7 +290,7 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(GLYP_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('贵旅优品预约结束\n');
         sendMessage.push('贵旅优品预约结束\n');
@@ -290,7 +303,7 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(KGLG_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('空港乐购预约结束\n');
         sendMessage.push('空港乐购预约结束\n');
@@ -303,7 +316,7 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(HLQG_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('航旅黔购预约结束\n');
         sendMessage.push('航旅黔购预约结束\n');
@@ -316,7 +329,7 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(ZHCS_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('遵航出山预约结束\n');
         sendMessage.push('遵航出山预约结束\n');
@@ -329,7 +342,7 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(GYQP_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('贵盐黔品预约结束\n');
         sendMessage.push('贵盐黔品预约结束\n');
@@ -342,7 +355,7 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(LLSC_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('乐旅商城预约结束\n');
         sendMessage.push('乐旅商城预约结束\n');
@@ -355,13 +368,13 @@ async function main() {
             console.log(`----第${index + 1}个号----`);
             sendMessage.push(`----第${index + 1}个号----`);
             await autoSubmit(YLQX_APPID, item);
-            await delay(1000);
+            await delay(500);
         }
         console.log('黔寻积分预约结束\n');
         sendMessage.push('黔寻积分预约结束\n');
     }
 
-    await notify.sendNotify(`葫芦娃预约`, sendMessage.join('\n'), {}, '\n\n本通知 By：一泽');
+    await notify.sendNotify(`葫芦娃预约`,countDuplicates(result)+sendMessage.join('\n'), {}, '');
 }
 
 main();

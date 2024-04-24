@@ -37,11 +37,19 @@
  const SK = '0d65f24dbe2bc1ede3c3ceeb96ef71bb';
  
  let sendMessage = [];
- 
+ let result = [];
  function delay (time) {
    return new Promise(resolve => setTimeout(resolve, time));
  }
- 
+
+ function countDuplicates(arr) {
+  const countMap = arr.reduce((countMap, item) => {
+      countMap[item] = (countMap[item] || 0) + 1;
+      return countMap;
+  }, {});
+
+  return Object.entries(countMap).map(([key, value]) => `${key} x${value}`).join('\n')+'\n\n\n';
+}
  function calculateDigest (body, sk) {
    const hmac = crypto.createHmac('sha256', sk);
    hmac.update(body);
@@ -196,12 +204,12 @@
      }
      console.log(`小程序：${channelName}，活动名称「${activityName}」，中签结果：${res5.message ?? '--'}`);
      sendMessage.push(`小程序：${channelName}，活动名称「${activityName}」，中签结果：${res5.message ?? '--'}`);
- 
-     // 发送飞书机器人
+     result.push(res5.message ?? '--')
  
    } catch (err) {
      console.log(`运行异常[${err.message}]`);
      sendMessage.push(`运行异常[${err.message}]`);
+     result.push(err.message)
    }
  }
  
@@ -222,7 +230,7 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(XLTH_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('偲源惠购查询结束\n');
      sendMessage.push('偲源惠购查询结束\n');
@@ -235,7 +243,7 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(GLYP_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('贵旅优品查询结束\n');
      sendMessage.push('贵旅优品查询结束\n');
@@ -248,7 +256,7 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(KGLG_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('空港乐购查询结束\n');
      sendMessage.push('空港乐购查询结束\n');
@@ -261,7 +269,7 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(HLQG_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('航旅黔购查询结束\n');
      sendMessage.push('航旅黔购查询结束\n');
@@ -274,7 +282,7 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(ZHCS_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('遵航出山查询结束\n');
      sendMessage.push('遵航出山查询结束\n');
@@ -287,7 +295,7 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(GYQP_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('贵盐黔品查询结束\n');
      sendMessage.push('贵盐黔品查询结束\n');
@@ -300,7 +308,7 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(LLSC_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('乐旅商城查询结束\n');
      sendMessage.push('乐旅商城查询结束\n');
@@ -313,13 +321,13 @@
        console.log(`----第${index + 1}个号----`);
        sendMessage.push(`----第${index + 1}个号----`);
        await autoSubmit(YLQX_APPID, item);
-       await delay(1000);
+       await delay(500);
      }
      console.log('黔寻积分查询结束\n');
      sendMessage.push('黔寻积分查询结束\n');
    }
  
-   await notify.sendNotify(`葫芦娃中签查询`, sendMessage.join('\n'), {},);
+   await notify.sendNotify(`葫芦娃中签查询`, countDuplicates(result)+sendMessage.join('\n'), {},);
  }
  
  main();
